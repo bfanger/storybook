@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: curl -X POST "https://api.netlify.com/build_hooks/$FRONTPAGE_HOOK"
+      - run: curl -X POST "https://api.netlify.com/build_hooks/${{ secrets.FRONTPAGE_HOOK }}"
 
   get-latest-release-branch:
     needs: branch-checks
